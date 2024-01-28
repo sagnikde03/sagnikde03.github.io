@@ -93,7 +93,7 @@
     margin-left: auto;
   }
 
-  .news-table td {
+  .news-td {
     padding: 20px;
     width: 100%;
     vertical-align: middle;
@@ -107,7 +107,6 @@
   .news-list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
   }
 
   .news-item {
@@ -118,18 +117,35 @@
     display: none;
   }
 
-  .dropdown-toggle {
-    cursor: pointer;
-    color: blue;
-  }
-
-  .dropdown-toggle::after {
-    content: '\25BC'; /* Unicode character for down arrow */
+  .dropdown-btn {
+    background-color: #f9f9f9;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
     display: inline-block;
-    margin-left: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
   }
 
-  .show-dropdown + .dropdown {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-btn:focus + .dropdown-content {
     display: block;
   }
 </style>
@@ -137,7 +153,7 @@
 <table class="news-table">
   <tbody>
     <tr>
-      <td>
+      <td class="news-td">
         <heading class="news-heading">News</heading>
 
         <!-- Top 5 News visible all the time -->
@@ -149,14 +165,14 @@
           <li class="news-item"><strong>Nov '23</strong> : Olfactory Perception paper accepted at <strong>IEEE C2I6 2023</strong>!</li>
         </ul>
 
-        <!-- Dropdown for remaining news -->
-        <p class="dropdown-toggle show-dropdown">Achieved News</p>
-        <div class="dropdown">
+        <!-- Dropdown for remaining archived news -->
+        <button class="dropdown-btn">Achieved News ▼</button>
+        <div class="dropdown-content">
           <ul class="news-list">
             <li class="news-item"><strong>Nov '23</strong> : Taste Sensation Recognition using EEG signals paper accepted at <strong>IEEE C2I6 2023</strong>!</li>
             <li class="news-item"><strong>Nov '23</strong> : Took responsiblities as <strong>Secretary</strong> of <strong>AI & Robotics Club</strong>, IEEE Calcutta University Student Branch</li>
             <li class="news-item"><strong>Oct '23</strong> : IQ Analysis paper accepted at <strong>IEEE CODEC 2023</strong>!</li>
-            <!-- Add more news items here -->
+            <!-- Add more archived news items here -->
           </ul>
         </div>
 
