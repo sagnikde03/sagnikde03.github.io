@@ -107,6 +107,7 @@
   .news-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   .news-item {
@@ -117,7 +118,18 @@
     display: none;
   }
 
-  .show-dropdown:checked + .dropdown {
+  .dropdown-toggle {
+    cursor: pointer;
+    color: blue;
+  }
+
+  .dropdown-toggle::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .show-dropdown + .dropdown {
     display: block;
   }
 </style>
@@ -138,7 +150,7 @@
         </ul>
 
         <!-- Dropdown for remaining news -->
-        <input type="checkbox" id="show-dropdown" class="show-dropdown">
+        <p class="dropdown-toggle show-dropdown">Achieved News</p>
         <div class="dropdown">
           <ul class="news-list">
             <li class="news-item"><strong>Nov '23</strong> : Taste Sensation Recognition using EEG signals paper accepted at <strong>IEEE C2I6 2023</strong>!</li>
