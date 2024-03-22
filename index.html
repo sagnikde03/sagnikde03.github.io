@@ -23,15 +23,26 @@
 <p style="text-align:center">
     <div style="display: flex; justify-content: center;">
         <p style="font-size: 16px;"><b>email: </b></p>
-        <p style="font-size: 16px;" id="hi">Bu0sSab0P12@kom</p>
-        <button id="btn" class="button" onclick="Change()">unscramble </button>
+        <p style="font-size: 16px;" id="hi"></p>
+        <button id="btn" class="button" onclick="unscramble()">unscramble </button>
     </div>
 </p>
 <head>
 <script>
-    function Change(){
-        document.getElementById('hi').innerHTML = "sagnikde2003@gmail.com";
-        document.getElementById('btn').innerHTML = "";
+    function unscramble(){
+        var email = "sagnikde2003@gmail.com";
+        var scrambledEmail = scrambleEmail(email);
+        document.getElementById('hi').innerHTML = scrambledEmail;
+        document.getElementById('btn').innerHTML = "unscramble";
+    }
+
+    function scrambleEmail(email) {
+        var shuffledEmail = '';
+        var emailArray = email.split('');
+        while (emailArray.length > 0) {
+            shuffledEmail += emailArray.splice(Math.floor(Math.random() * emailArray.length), 1);
+        }
+        return shuffledEmail;
     }
 </script>
 
