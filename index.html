@@ -23,27 +23,42 @@
 <p style="text-align:center">
     <div style="display: flex; justify-content: center;">
         <p style="font-size: 16px;"><b>email: </b></p>
-        <p style="font-size: 16px;" id="hi"></p>
-        <button id="btn" class="button" onclick="unscramble()">unscramble </button>
+        <p style="font-size: 16px;" id="email">Bu0sSab0P12@kom</p>
+        <button class="button" onclick="unscramble()">unscramble</button>
     </div>
 </p>
 <head>
 <script>
-    function unscramble(){
-        var email = "sagnikde2003@gmail.com";
-        var scrambledEmail = scrambleEmail(email);
-        document.getElementById('hi').innerHTML = scrambledEmail;
-        document.getElementById('btn').innerHTML = "unscramble";
+    // Array to hold scrambled versions of the email
+    var scrambledEmails = [
+        "Bu0sSab0P12@kom",
+        "0gde3gasmk@lnaii02",
+        "ksie3i@b0n3gdagm",
+        "dngaks2eim3o0@gb",
+        // Additional scrambled versions
+        "gaesmdk@o2n3gil03",
+        "3g0m2agisb@neidka",
+        "i3k0gnmdebs@ga2ao",
+        "2m3k0igdans@geo0b",
+        "3gi2n0mdsae@obgka",
+        // Add more scrambled versions here if needed
+    ];
+
+    // Function to unscramble and reveal the correct email
+    function unscramble() {
+        document.getElementById('email').innerHTML = "sagnikde2003@gmail.com";
+        document.querySelector('button').style.display = 'none';
     }
 
-    function scrambleEmail(email) {
-        var shuffledEmail = '';
-        var emailArray = email.split('');
-        while (emailArray.length > 0) {
-            shuffledEmail += emailArray.splice(Math.floor(Math.random() * emailArray.length), 1);
-        }
-        return shuffledEmail;
+    // Function to generate a random scrambled email
+    function generateRandomEmail() {
+        var randomIndex = Math.floor(Math.random() * scrambledEmails.length);
+        var randomEmail = scrambledEmails[randomIndex];
+        document.getElementById('email').innerHTML = randomEmail;
     }
+
+    // Initially generate a random scrambled email
+    generateRandomEmail();
 </script>
 
 <style>
