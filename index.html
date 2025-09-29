@@ -106,7 +106,7 @@
         <br><br>
 
         <!-- Journal -->
-        <em>Computers in Biology and Medicine</em>
+        <em>Computers in Biology and Medicine, 2025</em>
         <br><br>
 
         <!-- Links -->
@@ -134,34 +134,54 @@ function toggleAbstract(id) {
 }
 </script>
 
+    <tr>
+      <!-- Left side: Figure -->
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src="images/tastenet.jpg" width="160">
+        </div>
+      </td>
 
+      <!-- Right side: Paper details -->
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <!-- Title with DOI link -->
+        <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank" style="text-decoration:none; color:black;">
+          <papertitle>TasteNet: A Novel Deep Learning Approach for EEG-Based Basic Taste Perception Recognition Using CEEMDAN Domain Entropy Features</papertitle>
+        </a>
+        <br><br>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <img src='images/binar.jpg' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="#">
-                <papertitle>Variational Augmentation for Enhancing Historical Document Image Binarization</papertitle>
-              </a>
-              <br>
-              <strong>Avirup Dey</strong>,
-              Mita Nasipuri,
-              Nibaran Das
-              <br>
-              <em>ICVGIP</em>, 2022
-              <br>
-              <a href="https://github.com/AvirupJU/Variational-Augmentation-for-Enhancing-Historical-Document-Image-Binarization" target="_blank">code</a>
-              /
-              <a href="https://dl.acm.org/doi/abs/10.1145/3571600.3571641" target="_blank">paper</a>
-              <p></p>
-              <p>
-               TLDR: GAN-based augmentation helps segmentation models perform better on document binarization benchmarks (DIBCO).
-              </p>
-            </td>
-          </tr>
+        <!-- Authors -->
+        <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy  
+        <br><br>
+
+        <!-- Journal -->
+        <em>Journal of Neuroscience Methods, 2025</em>
+        <br><br>
+
+        <!-- Links -->
+        <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Article</a>
+
+        <!-- Hidden Abstract -->
+        <div id="abs-tastenet" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc;">
+          Taste perception is the process by which the gustatory system detects and interprets chemical stimuli from food and beverages, involving activation of taste receptors on the tongue. Analyzing taste perception is essential for understanding human sensory responses and diagnosing taste-related disorders. This research focuses on developing a deep learning framework to effectively recognize basic taste stimuli from EEG signals. Initially, the recorded EEG signals undergo preprocessing to remove noise and artifacts. The CEEMDAN (complete ensemble empirical mode decomposition with adaptive noise) method is then applied to decompose the EEG signals into various frequency rhythms, referred to as intrinsic mode functions (IMFs). From the chosen IMFs, six distinct entropy features — sample, bubble, approximate, dispersion, slope, and permutation entropy — are extracted for further analysis. A novel deep learning model, TasteNet, is then developed, integrating a convolutional neural network (CNN) module, a multi-head attention module, and the Att-BiPLSTM (Attention-Bidirectional Potent Long Short-Term Memory) network. The proposed architecture classifies the input data into six categories: no taste, sweet, sour, bitter, umami, and salty, achieving a remarkable accuracy of 97.52 ± 0.48%. TasteNet outperforms existing taste perception classification methods, as demonstrated through extensive experiments. This study presents TasteNet, a robust framework for precise taste perception recognition using EEG signals. Using CEEMDAN for effective signal decomposition and extracting key entropy features, the model captures intricate patterns in taste stimuli. The incorporation of multi-head attention module and the Att-BiPLSTM network further enhances the model’s ability to identify various taste sensations accurately.
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function toggleAbstract(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
