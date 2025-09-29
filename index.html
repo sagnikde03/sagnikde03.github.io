@@ -83,88 +83,77 @@
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
     <tr>
-      <!-- Left side: Figure -->
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src="images/gleam.jpg" width="160">
-        </div>
-      </td>
+      <td style="padding:20px;width:100%;vertical-align:middle; text-align:center;">
+        <div style="font-family:Arial, sans-serif; max-width:900px; margin:auto;">
+          <h2 style="margin-bottom:30px;">Publications / Pre-Prints</h2>
 
-      <!-- Right side: Paper details -->
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- Title with DOI link -->
-        <a href="https://doi.org/10.1016/j.compbiomed.2025.109928" target="_blank" style="text-decoration:none; color:black;">
-          <papertitle>GLEAM: A Multimodal Deep Learning Framework for Chronic Lower Back Pain Detection Using EEG and sEMG Signals</papertitle>
-        </a>
-        <br><br>
+          <!-- GLEAM -->
+          <table style="width:100%; margin:auto; border:0; border-spacing:0; border-collapse:separate; margin-bottom:40px;">
+            <tbody>
+              <tr>
+                <!-- Figure -->
+                <td style="padding:20px; width:25%; vertical-align:middle; text-align:center;">
+                  <img src="images/gleam.jpg" width="160" style="border-radius:5px;">
+                </td>
 
-        <!-- Authors -->
-        <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy  
-        <br><br>
+                <!-- Paper Info -->
+                <td style="padding:20px; width:75%; vertical-align:middle; text-align:left;">
+                  <a href="https://doi.org/10.1016/j.compbiomed.2025.109928" target="_blank" style="text-decoration:none; color:blue; font-size:18px; font-weight:bold;">
+                    GLEAM: A Multimodal Deep Learning Framework for Chronic Lower Back Pain Detection Using EEG and sEMG Signals
+                  </a>
+                  <br><br>
+                  <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy
+                  <br><br>
+                  <em>Computers in Biology and Medicine, 2025</em>
+                  <br><br>
+                  <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
+                  <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Website</a>
+                  <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">arXiv</a>
+                  <a href="#" style="text-decoration:none; color:#0066cc;">BibTeX</a>
 
-        <!-- Journal -->
-        <em>Computers in Biology and Medicine, 2025</em>
-        <br><br>
+                  <div id="abs-gleam" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc; text-align:justify;">
+                    Low Back Pain (LBP) is the most prevalent musculoskeletal condition worldwide and a leading cause of disability, significantly affecting mobility, work productivity, and overall quality of life. Due to its high prevalence and substantial economic burden, LBP presents a critical global public health challenge that demands innovative diagnostic and therapeutic solutions. This study introduces a novel deep-learning approach for diagnosing LBP intensity using electroencephalography (EEG) signals and surface electromyography (sEMG) signals from back muscles. A GAN-Convolution-Transformer-based model, named GLEAM (GAN-ConvoLution-sElf Attention-ETLSTM), is designed to classify LBP intensity into four categories: no LBP, mild LBP, moderate LBP, and intolerable LBP. A denoising GAN is central to the model’s functionality, playing a pivotal role in enhancing the quality of EEG and sEMG signals by removing noise, resulting in cleaner and more accurate input data. Various features are extracted from the GAN-denoised EEG and sEMG signals, and the combined features from both EEG and sEMG are used for LBP detection. After the feature extraction, the CNN is employed to capture local temporal patterns within the data, allowing the model to focus on smaller, region-specific trends in the signals. Subsequently, the self-attention module identifies global correlations among these locally extracted features, enhancing the model’s ability to recognize broader patterns. The proposed ETLSTM network performs the final classification, which achieves an impressive LBP detection accuracy of 98.95%. This research presents several innovative contributions: (i) the development of a novel denoising GAN for cleaning EEG and sEMG signals, (ii) the design and integration of a new ETLSTM architecture as a classifier within the GLEAM model, and (iii) the introduction of the GLEAM hybrid deep learning framework, which enables robust and reliable LBP intensity assessment.
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <!-- Links -->
-        <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
-        <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Article</a>
-    
+          <!-- TasteNet -->
+          <table style="width:100%; margin:auto; border:0; border-spacing:0; border-collapse:separate; margin-bottom:40px;">
+            <tbody>
+              <tr>
+                <!-- Figure -->
+                <td style="padding:20px; width:25%; vertical-align:middle; text-align:center;">
+                  <img src="images/tastenet.jpg" width="160" style="border-radius:5px;">
+                </td>
 
-        <!-- Hidden Abstract -->
-        <div id="abs-gleam" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc;">
-          Low Back Pain (LBP) is the most prevalent musculoskeletal condition worldwide and a leading cause of disability, significantly affecting mobility, work productivity, and overall quality of life. Due to its high prevalence and substantial economic burden, LBP presents a critical global public health challenge that demands innovative diagnostic and therapeutic solutions. This study introduces a novel deep-learning approach for diagnosing LBP intensity using electroencephalography (EEG) signals and surface electromyography (sEMG) signals from back muscles. A GAN-Convolution-Transformer-based model, named GLEAM (GAN-ConvoLution-sElf Attention-ETLSTM), is designed to classify LBP intensity into four categories: no LBP, mild LBP, moderate LBP, and intolerable LBP. A denoising GAN is central to the model’s functionality, playing a pivotal role in enhancing the quality of EEG and sEMG signals by removing noise, resulting in cleaner and more accurate input data. Various features are extracted from the GAN-denoised EEG and sEMG signals, and the combined features from both EEG and sEMG are used for LBP detection. After the feature extraction, the CNN is employed to capture local temporal patterns within the data, allowing the model to focus on smaller, region-specific trends in the signals. Subsequently, the self-attention module identifies global correlations among these locally extracted features, enhancing the model’s ability to recognize broader patterns. The proposed ETLSTM network performs the final classification, which achieves an impressive LBP detection accuracy of 98.95%. This research presents several innovative contributions: (i) the development of a novel denoising GAN for cleaning EEG and sEMG signals, (ii) the design and integration of a new ETLSTM architecture as a classifier within the GLEAM model, and (iii) the introduction of the GLEAM hybrid deep learning framework, which enables robust and reliable LBP intensity assessment.
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+                <!-- Paper Info -->
+                <td style="padding:20px; width:75%; vertical-align:middle; text-align:left;">
+                  <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank" style="text-decoration:none; color:blue; font-size:18px; font-weight:bold;">
+                    TasteNet: A Novel Deep Learning Approach for EEG-Based Basic Taste Perception Recognition Using CEEMDAN Domain Entropy Features
+                  </a>
+                  <br><br>
+                  <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy
+                  <br><br>
+                  <em>Journal of Neuroscience Methods</em>
+                  <br><br>
+                  <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
+                  <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Website</a>
+                  <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">arXiv</a>
+                  <a href="#" style="text-decoration:none; color:#0066cc;">BibTeX</a>
 
-<script>
-function toggleAbstract(id) {
-  var x = document.getElementById(id);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+                  <div id="abs-tastenet" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc; text-align:justify;">
+                    Taste perception is the process by which the gustatory system detects and interprets chemical stimuli from food and beverages, involving activation of taste receptors on the tongue. Analyzing taste perception is essential for understanding human sensory responses and diagnosing taste-related disorders. This research focuses on developing a deep learning framework to effectively recognize basic taste stimuli from EEG signals. Initially, the recorded EEG signals undergo preprocessing to remove noise and artifacts. The CEEMDAN (complete ensemble empirical mode decomposition with adaptive noise) method is then applied to decompose the EEG signals into various frequency rhythms, referred to as intrinsic mode functions (IMFs). From the chosen IMFs, six distinct entropy features — sample, bubble, approximate, dispersion, slope, and permutation entropy — are extracted for further analysis. A novel deep learning model, TasteNet, is then developed, integrating a convolutional neural network (CNN) module, a multi-head attention module, and the Att-BiPLSTM (Attention-Bidirectional Potent Long Short-Term Memory) network. The proposed architecture classifies the input data into six categories: no taste, sweet, sour, bitter, umami, and salty, achieving a remarkable accuracy of 97.52 ± 0.48%. TasteNet outperforms existing taste perception classification methods, as demonstrated through extensive experiments. This study presents TasteNet, a robust framework for precise taste perception recognition using EEG signals. Using CEEMDAN for effective signal decomposition and extracting key entropy features, the model captures intricate patterns in taste stimuli. The incorporation of multi-head attention module and the Att-BiPLSTM network further enhances the model’s ability to identify various taste sensations accurately.
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-    <tr>
-      <!-- Left side: Figure -->
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src="images/tastenet.jpg" width="160">
-        </div>
-      </td>
-
-      <!-- Right side: Paper details -->
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- Title with DOI link -->
-        <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank" style="text-decoration:none; color:black;">
-          <papertitle>TasteNet: A Novel Deep Learning Approach for EEG-Based Basic Taste Perception Recognition Using CEEMDAN Domain Entropy Features</papertitle>
-        </a>
-        <br><br>
-
-        <!-- Authors -->
-        <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy  
-        <br><br>
-
-        <!-- Journal -->
-        <em>Journal of Neuroscience Methods, 2025</em>
-        <br><br>
-
-        <!-- Links -->
-        <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
-        <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Article</a>
-
-        <!-- Hidden Abstract -->
-        <div id="abs-tastenet" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc;">
-          Taste perception is the process by which the gustatory system detects and interprets chemical stimuli from food and beverages, involving activation of taste receptors on the tongue. Analyzing taste perception is essential for understanding human sensory responses and diagnosing taste-related disorders. This research focuses on developing a deep learning framework to effectively recognize basic taste stimuli from EEG signals. Initially, the recorded EEG signals undergo preprocessing to remove noise and artifacts. The CEEMDAN (complete ensemble empirical mode decomposition with adaptive noise) method is then applied to decompose the EEG signals into various frequency rhythms, referred to as intrinsic mode functions (IMFs). From the chosen IMFs, six distinct entropy features — sample, bubble, approximate, dispersion, slope, and permutation entropy — are extracted for further analysis. A novel deep learning model, TasteNet, is then developed, integrating a convolutional neural network (CNN) module, a multi-head attention module, and the Att-BiPLSTM (Attention-Bidirectional Potent Long Short-Term Memory) network. The proposed architecture classifies the input data into six categories: no taste, sweet, sour, bitter, umami, and salty, achieving a remarkable accuracy of 97.52 ± 0.48%. TasteNet outperforms existing taste perception classification methods, as demonstrated through extensive experiments. This study presents TasteNet, a robust framework for precise taste perception recognition using EEG signals. Using CEEMDAN for effective signal decomposition and extracting key entropy features, the model captures intricate patterns in taste stimuli. The incorporation of multi-head attention module and the Att-BiPLSTM network further enhances the model’s ability to identify various taste sensations accurately.
         </div>
       </td>
     </tr>
@@ -182,44 +171,6 @@ function toggleAbstract(id) {
 }
 </script>
 
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <img src='images/upcon.jpg' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="#">
-                <papertitle>ResCNN: An Alternative Implementation of Convolutional Neural Networks</papertitle>
-              </a>
-              <br>
-              <strong>Avirup Dey</strong>,
-              Sarosij Bose
-              <br>
-              <em>IEEE UPCON</em>, 2021
-              <br>
-              <a href="https://github.com/sarosijbose/ResCNN" target="_blank">code</a>
-              /
-              <a href="https://ieeexplore.ieee.org/document/9667654" target="_blank">paper</a>
-              /
-              <a href="https://sarosijbose.github.io/files/ResCNN_UPCON_2021_Slides.pdf" target="_blank">slides</a>
-              <p></p>
-              <p>
-              TLDR: Expressing kernel convolution as a matrix-matrix product and reducing image rank boosts training efficiency.
-              </p>
-            </td>
-          </tr>
-
-
-
-
-    
-
-
-    
-
-        </tbody></table>
 
 				
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
