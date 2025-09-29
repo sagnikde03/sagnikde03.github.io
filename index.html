@@ -213,6 +213,53 @@ function toggleAbstract(id) {
   }
 }
 </script>
+
+	<!-- SLiTRANet -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/tastenet.jpg" width="160">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank">
+                  <papertitle>SLiTRANet: An EEG-Based Automated Diagnosis Framework for Major Depressive Disorder Monitoring Using a Novel LGCN and Transformer-Based Hybrid Deep Learning Approach</papertitle>
+                </a>
+                <br>
+                <strong>Sagnik De</strong>, Anurag Singh, Vivek Tiwari, Harshita Patel, G. N. Vivekananda, Dharmendra Singh Rajput
+                <br>  <br>
+                <a href="https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6287639" target="_blank">
+                <em>IEEE Access</em>
+                </a>, 2025
+                <br>  <br>
+                <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')">Abstract</a> /
+                <a href="https://doi.org/10.1109/ACCESS.2024.3493140">Article</a> 
+                <p></p>
+                <p id="abs-tastenet" style="display:none;">
+                 Major depressive disorder (MDD) is a mental ailment marked by a loss of interest in activities, persistent depression, and hopelessness. MDD has been on the rise in society in recent decades for varied reasons and has spurred suicidal tendencies among individuals. Early detection, continuous monitoring, and effective treatment are crucial for its impact on quality of life and society. EEG signal models the brain’s electrical activities and has emerged as a potential tool to assess the depression status of a person. Due to advancements in sensor technology, fast, convenient, and cost-effective EEG acquisition is now possible, resulting in many EEG-based healthcare monitoring applications in recent years. This work proposes an EEG-headset-based smart monitoring system for real-time diagnosis of MDD in the Internet of Medical Things (IoMT) framework. In this study, we proposed a novel Linear Graph Convolution Network-Transformer-based deep learning approach for categorizing MDD through a time-frequency analysis of EEG signals. The Stockwell transform (S-transform) is employed to exploit the spectro-temporal information from the EEG and the resulting 2D representation is then fed into customized Linear Graph Convolution Network for MDD detection. We have utilized the Weighted Focal Binary Hinge Loss function, specifically designed for customized Linear Graph Convolution Network, to improve learning and handle unbalanced input. Subsequently, a novel Transformer model is designed to refine the MDD classification further. The proposed methodology named SLiTRANet, blends spectral analysis with the S-transform, graph-based learning with Linear Graph Convolution Network, and the sequence modeling capability of the Transformer. The proposed SLiTRANet model can be further integrated within an IoMT framework for automated real-time MDD diagnosis using EEG signals. The proposed methodology is evaluated on two publicly available datasets, MODMA and HUSM datasets. The evaluation results demonstrate the superior performance of the proposed SLiTRANet framework against the existing pre-trained and hybrid deep learning models, achieving remarkable accuracy, sensitivity, specificity, and precision rates of 99.92%, 99.90%, 99.95%, and 99.97%, respectively on HUSM dataset followed by an equally good performance on MODMA dataset with an accuracy of 99.68%. The proposed comprehensive approach implemented on two varied datasets highlights significant advancements in depression detection by outperforming state-of-art approaches.
+
+                </p>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function toggleAbstract(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 	
 
 
