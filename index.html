@@ -83,33 +83,51 @@
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <img src='images/mtsr.jpg' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="#">
-                <papertitle>MTSR-MRI: Combined Modality Translation and Super-Resolution of Magnetic Resonance Images</papertitle>
-              </a>
-              <br>
-              <strong>Avirup Dey</strong>,
-              Mehran Ebrahimi
-              <br>
-              <em>MIDL</em>, 2023
-              <br>
-              <a href="https://github.com/AvirupJU/MTSR-MRI" target="_blank">code</a>
-              /
-              <a href="https://openreview.net/pdf?id=mUPIsk20oGt" target="_blank">paper</a>
-              <p></p>
-              <p>
-              TLDR: Pilot study on cross-modal MRI super-resolution. Optimized off-the-shelf i2i models to leverage sparsity of the scans. 
-              </p>
-            </td>
-          </tr>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <!-- Left side: Figure -->
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src="images/gleam.jpg" width="160">
+        </div>
+      </td>
+
+      <!-- Right side: Paper details -->
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="#">
+          <papertitle>GLEAM: A Multimodal Deep Learning Framework for Chronic Lower Back Pain Detection Using EEG and sEMG Signals</papertitle>
+        </a>
+        <br>
+        <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy  
+        <br>
+        <em>Computers in Biology and Medicine</em>
+        <br>
+        <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')" style="margin-right:15px; text-decoration:none; color:#0066cc;">Abstract</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">Website</a>
+        <a href="#" style="margin-right:15px; text-decoration:none; color:#0066cc;">arXiv</a>
+        <a href="#" style="text-decoration:none; color:#0066cc;">BibTeX</a>
+
+        <!-- Hidden Abstract -->
+        <div id="abs-gleam" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc;">
+          Low Back Pain (LBP) is the most prevalent musculoskeletal condition worldwide and a leading cause of disability, significantly affecting mobility, work productivity, and overall quality of life. Due to its high prevalence and substantial economic burden, LBP presents a critical global public health challenge that demands innovative diagnostic and therapeutic solutions. This study introduces a novel deep-learning approach for diagnosing LBP intensity using electroencephalography (EEG) signals and surface electromyography (sEMG) signals from back muscles. A GAN-Convolution-Transformer-based model, named GLEAM (GAN-ConvoLution-sElf Attention-ETLSTM), is designed to classify LBP intensity into four categories: no LBP, mild LBP, moderate LBP, and intolerable LBP. A denoising GAN is central to the model’s functionality, playing a pivotal role in enhancing the quality of EEG and sEMG signals by removing noise, resulting in cleaner and more accurate input data. Various features are extracted from the GAN-denoised EEG and sEMG signals, and the combined features from both EEG and sEMG are used for LBP detection. After the feature extraction, the CNN is employed to capture local temporal patterns within the data, allowing the model to focus on smaller, region-specific trends in the signals. Subsequently, the self-attention module identifies global correlations among these locally extracted features, enhancing the model’s ability to recognize broader patterns. The proposed ETLSTM network performs the final classification, which achieves an impressive LBP detection accuracy of 98.95%. This research presents several innovative contributions: (i) the development of a novel denoising GAN for cleaning EEG and sEMG signals, (ii) the design and integration of a new ETLSTM architecture as a classifier within the GLEAM model, and (iii) the introduction of the GLEAM hybrid deep learning framework, which enables robust and reliable LBP intensity assessment.
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function toggleAbstract(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
