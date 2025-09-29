@@ -83,58 +83,66 @@
             </td>
           </tr>
         </tbody></table>
-      <table width="100%" align="center" border="0" cellpadding="5">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
     <tr>
-      <td width="100%" valign="center" style="text-align:center; font-family:Arial, sans-serif;">
-        <h2 style="margin-bottom:30px;">Publications / Pre-Prints</h2>
+      <td style="padding:20px;width:100%;vertical-align:middle">
+        <heading>Publications / Pre-Prints</heading>
+        <p></p>
 
-        <!-- GLEAM -->
-        <table width="100%" align="center" border="0" cellpadding="5" style="margin-bottom:40px;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
+            
+            <!-- GLEAM -->
             <tr>
-              <td width="100%" valign="center">
-                <a href="https://doi.org/10.1016/j.compbiomed.2025.109928" target="_blank" style="color:#0066cc; text-decoration:none; font-weight:bold; font-size:16px;">
-                  GLEAM: A Multimodal Deep Learning Framework for Chronic Lower Back Pain Detection Using EEG and sEMG Signals
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/gleam.jpg" width="160">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://doi.org/10.1016/j.compbiomed.2025.109928" target="_blank">
+                  <papertitle>GLEAM: A Multimodal Deep Learning Framework for Chronic Lower Back Pain Detection Using EEG and sEMG Signals</papertitle>
                 </a>
-                <br><br>
+                <br>
                 <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy
-                <br><br>
+                <br>
                 <em>Computers in Biology and Medicine, 2025</em>
-                <br><br>
-                <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')" style="margin-right:15px; color:#0066cc; text-decoration:none;">Abstract</a>
-                <a href="https://doi.org/10.1016/j.compbiomed.2025.109928" style="margin-right:15px; color:#0066cc; text-decoration:none;">Article</a>
-
-                <div id="abs-gleam" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc; text-align:justify;">
+                <br>
+                <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')">Abstract</a> /
+                <a href="https://doi.org/10.1016/j.compbiomed.2025.109928">Article</a> 
+                <p></p>
+                <p id="abs-gleam" style="display:none;">
                   Low Back Pain (LBP) is the most prevalent musculoskeletal condition worldwide and a leading cause of disability, significantly affecting mobility, work productivity, and overall quality of life. Due to its high prevalence and substantial economic burden, LBP presents a critical global public health challenge that demands innovative diagnostic and therapeutic solutions. This study introduces a novel deep-learning approach for diagnosing LBP intensity using electroencephalography (EEG) signals and surface electromyography (sEMG) signals from back muscles. A GAN-Convolution-Transformer-based model, named GLEAM (GAN-ConvoLution-sElf Attention-ETLSTM), is designed to classify LBP intensity into four categories: no LBP, mild LBP, moderate LBP, and intolerable LBP. A denoising GAN is central to the model’s functionality, playing a pivotal role in enhancing the quality of EEG and sEMG signals by removing noise, resulting in cleaner and more accurate input data. Various features are extracted from the GAN-denoised EEG and sEMG signals, and the combined features from both EEG and sEMG are used for LBP detection. After the feature extraction, the CNN is employed to capture local temporal patterns within the data, allowing the model to focus on smaller, region-specific trends in the signals. Subsequently, the self-attention module identifies global correlations among these locally extracted features, enhancing the model’s ability to recognize broader patterns. The proposed ETLSTM network performs the final classification, which achieves an impressive LBP detection accuracy of 98.95%. This research presents several innovative contributions: (i) the development of a novel denoising GAN for cleaning EEG and sEMG signals, (ii) the design and integration of a new ETLSTM architecture as a classifier within the GLEAM model, and (iii) the introduction of the GLEAM hybrid deep learning framework, which enables robust and reliable LBP intensity assessment.
-                </div>
+                </p>
               </td>
             </tr>
-          </tbody>
-        </table>
 
-        <!-- TasteNet -->
-        <table width="100%" align="center" border="0" cellpadding="5">
-          <tbody>
+            <!-- TasteNet -->
             <tr>
-              <td width="100%" valign="center">
-                <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank" style="color:#0066cc; text-decoration:none; font-weight:bold; font-size:16px;">
-                  TasteNet: A Novel Deep Learning Approach for EEG-Based Basic Taste Perception Recognition Using CEEMDAN Domain Entropy Features
-                </a>
-                <br><br>
-                <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy
-                <br><br>
-                <em>Journal of Neuroscience Methods, 2025</em>
-                <br><br>
-                <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')" style="margin-right:15px; color:#0066cc; text-decoration:none;">Abstract</a>
-                <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" style="margin-right:15px; color:#0066cc; text-decoration:none;">Article</a>
-
-
-                <div id="abs-tastenet" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border-left:3px solid #0066cc; text-align:justify;">
-                  Taste perception is the process by which the gustatory system detects and interprets chemical stimuli from food and beverages, involving activation of taste receptors on the tongue. Analyzing taste perception is essential for understanding human sensory responses and diagnosing taste-related disorders. This research focuses on developing a deep learning framework to effectively recognize basic taste stimuli from EEG signals. Initially, the recorded EEG signals undergo preprocessing to remove noise and artifacts. The CEEMDAN (complete ensemble empirical mode decomposition with adaptive noise) method is then applied to decompose the EEG signals into various frequency rhythms, referred to as intrinsic mode functions (IMFs). From the chosen IMFs, six distinct entropy features — sample, bubble, approximate, dispersion, slope, and permutation entropy — are extracted for further analysis. A novel deep learning model, TasteNet, is then developed, integrating a convolutional neural network (CNN) module, a multi-head attention module, and the Att-BiPLSTM (Attention-Bidirectional Potent Long Short-Term Memory) network. The proposed architecture classifies the input data into six categories: no taste, sweet, sour, bitter, umami, and salty, achieving a remarkable accuracy of 97.52 ± 0.48%. TasteNet outperforms existing taste perception classification methods, as demonstrated through extensive experiments. This study presents TasteNet, a robust framework for precise taste perception recognition using EEG signals. Using CEEMDAN for effective signal decomposition and extracting key entropy features, the model captures intricate patterns in taste stimuli. The incorporation of multi-head attention module and the Att-BiPLSTM network further enhances the model’s ability to identify various taste sensations accurately.
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/tastenet.jpg" width="160">
                 </div>
               </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://doi.org/10.1016/j.jneumeth.2025.110463" target="_blank">
+                  <papertitle>TasteNet: A Novel Deep Learning Approach for EEG-Based Basic Taste Perception Recognition Using CEEMDAN Domain Entropy Features</papertitle>
+                </a>
+                <br>
+                <strong>Sagnik De</strong>, Prithwijit Mukherjee, Anisha Halder Roy
+                <br>
+                <em>Journal of Neuroscience Methods, 2025</em>
+                <br>
+                <a href="javascript:void(0);" onclick="toggleAbstract('abs-tastenet')">Abstract</a> /
+                <a href="https://doi.org/10.1016/j.jneumeth.2025.110463">Article</a> 
+                <p></p>
+                <p id="abs-tastenet" style="display:none;">
+                  Taste perception is the process by which the gustatory system detects and interprets chemical stimuli from food and beverages, involving activation of taste receptors on the tongue. Analyzing taste perception is essential for understanding human sensory responses and diagnosing taste-related disorders. This research focuses on developing a deep learning framework to effectively recognize basic taste stimuli from EEG signals. Initially, the recorded EEG signals undergo preprocessing to remove noise and artifacts. The CEEMDAN (complete ensemble empirical mode decomposition with adaptive noise) method is then applied to decompose the EEG signals into various frequency rhythms, referred to as intrinsic mode functions (IMFs). From the chosen IMFs, six distinct entropy features — sample, bubble, approximate, dispersion, slope, and permutation entropy — are extracted for further analysis. A novel deep learning model, TasteNet, is then developed, integrating a convolutional neural network (CNN) module, a multi-head attention module, and the Att-BiPLSTM (Attention-Bidirectional Potent Long Short-Term Memory) network. The proposed architecture classifies the input data into six categories: no taste, sweet, sour, bitter, umami, and salty, achieving a remarkable accuracy of 97.52 ± 0.48%. TasteNet outperforms existing taste perception classification methods, as demonstrated through extensive experiments. This study presents TasteNet, a robust framework for precise taste perception recognition using EEG signals. Using CEEMDAN for effective signal decomposition and extracting key entropy features, the model captures intricate patterns in taste stimuli. The incorporation of multi-head attention module and the Att-BiPLSTM network further enhances the model’s ability to identify various taste sensations accurately.
+                </p>
+              </td>
             </tr>
+
           </tbody>
         </table>
 
