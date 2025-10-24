@@ -96,6 +96,35 @@ where I worked on computational models of brain resting-state dynamics and neuro
         <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:auto;">
           <tbody>
 
+
+			  <!-- Transactions -->
+<tr style="background-color:#ffffcc; border-radius:4px;">
+  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center;">
+    <img src="images/trans.png" width="240" height="125" style="border-radius:10px;">
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle;">
+    <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723156" target="_blank">
+      <papertitle><b>A Novel Vision Transformer based Multimodal Fusion Approach for Clinical MDD Diagnosis Using EEG and Audio Signals</b></papertitle>
+    </a>
+    <br><strong>Sagnik De</strong>, Anurag Singh, Ashish Kumar Bhandari
+    <br><br>
+    <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723156" target="_blank">
+      <em>IEEE Transactions on Computational Biology and Bioinformatics</em>
+    </a>, <em>2025</em>
+    <br><br>
+    <a href="javascript:void(0);" onclick="toggleAbstract('abs-gleam')">Abstract</a> /
+    <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723156">Article</a>
+    <p id="abs-gleam" style="display:none;text-align:justify;">
+      Major Depressive Disorder (MDD) is a debilitating mental health condition characterized by persistent sadness, anhedonia, and cognitive impairments that significantly disrupt daily functioning. Accurate diagnosis remains difficult due to the subjective nature of clinical assessments, highlighting the need for objective and automated diagnostic tools. Hence, this study proposes a novel multimodal framework integrating electroencephalography (EEG) and audio signals for accurate MDD detection. EEG signals undergo preprocessing and are transformed into 2D time-frequency (T-F) representations using the Superlet Transform, while audio signals are converted into Mel-spectrograms. The 2D representations from each modality are independently fed into a novel Vision Transformer (ViT) architecture. The proposed ViT first slices the T-F representation along frequency bands and applies positional encoding to each slice. The resulting slice embeddings are subsequently processed through a parallel Transformer Encoder (PE) module to effectively capture temporal dependencies. After the PE module has extracted sufficient information from the embedded slices, a learnable class token is appended to them, and the combined representation is passed through the Class Encoder (CE) module, allowing the model to capture global contextual information. Features extracted independently from EEG and audio streams are then fused and fed into a fully connected layer for final classification. Evaluation on the MODMA clinical dataset shows the framework achieves 98.86% accuracy, 98.32% F1-score, and 0.9403 MCC, surpassing unimodal baselines. The lightweight feature extraction and transformer-based fusion mechanisms enable the proposed architecture deployable in an edge–fog–cloud Internet of Medical Things (IoMT) system, resulting in low-latency, resource-efficient, and scalable remote diagnosis, enhancing accessibility and real-time clinical decision-making.
+    </p>
+  </td>
+</tr>
+			  
+<!-- Spacer Row for Gap Between Works -->
+<tr>
+  <td colspan="2" style="height:25px;"></td>
+</tr>
+
            <!-- GLEAM -->
 <tr style="background-color:#ffffcc; border-radius:4px;">
   <td style="padding:20px;width:25%;vertical-align:middle;text-align:center;">
