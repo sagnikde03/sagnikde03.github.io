@@ -10,47 +10,6 @@
 href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 </head>
 
-	<!-- ===== Scrambled Email Section ===== -->
-<p style="text-align:center; font-size:18px;">
-  <b>email:</b> 
-  <span id="email-display" style="font-family:monospace; background:#fafafa; border-radius:6px; padding:6px 10px; border:1px solid #eee;">
-    gm203ik3aelngd@aoscm.il
-  </span>
-  <a href="javascript:void(0);" id="unscramble" style="color:#1a73e8; font-weight:600; text-decoration:underline; margin-left:8px;">
-    unscramble
-  </a>
-</p>
-
-<script>
-  // Actual email to reveal on click
-  const TRUE_EMAIL = "sagnikde2003@gmail.com";
-  const btn = document.getElementById("unscramble");
-  const display = document.getElementById("email-display");
-  let revealed = false;
-
-  btn.addEventListener("click", () => {
-    if (revealed) return;
-    revealed = true;
-
-    const link = document.createElement("a");
-    link.href = "mailto:" + TRUE_EMAIL;
-    link.textContent = TRUE_EMAIL;
-    link.style.fontWeight = "600";
-    link.style.color = "#111";
-    link.style.textDecoration = "none";
-
-    display.innerHTML = "";
-    display.appendChild(link);
-
-    btn.textContent = "revealed";
-    btn.style.color = "#777";
-    btn.style.textDecoration = "none";
-    btn.style.cursor = "default";
-  });
-</script>
-<!-- ===== End of Scrambled Email Section ===== -->
-
-	
 	
 <body>
   <div id="particles-js"></div>
