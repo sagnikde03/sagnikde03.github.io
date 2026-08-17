@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "👋🏼 Hello there, I’m Sagnik!"
 author_profile: Sagnik De
 redirect_from: 
   - /about/
