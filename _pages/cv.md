@@ -24,7 +24,7 @@ Work experience
   * Graph-based deep learning methods with explainable AI for anxiety state detection using EEG signals
   * Development of explainable deep learning framework for robust brain tumor detection from MRI scans
 
-* Maulana Azad National Institute of Technology
+* Maulana Azad National Institute of Technology (MANIT), Bhopal
   * Project Intern, Aug 2024 – Mar 2026
   * Supervisor: Dr. Varun Bajaj
   * Implementation of a deep learning framework utilizing cross-modal interactions for cognitive task decoding in BCI applications using EEG–fNIRS signals
@@ -50,7 +50,7 @@ Work experience
   * Development of an age- and gender-informed deep learning framework for Alzheimer’s disease detection from T1-weighted MRI
   * Explored multimodal deep learning models for wearable physiological signal analysis in digital health
 
-* University of Calcutta
+* University of Calcutta, Kolkata
   * Undergraduate Research Assistant, Oct 2022 – Apr 2025
   * Supervisor: Dr. Anisha Halder Roy
   * Multimodal deep learning approach using EEG and sEMG signals for Lower Back Pain assessment
