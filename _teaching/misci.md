@@ -18,7 +18,7 @@ author_profile: true
 
 # Reviewer Activities
 
-### Journals
+## Journals
 
 - *Artificial Intelligence in Medicine*
 - *Biomedical Signal Processing & Control*
@@ -29,7 +29,7 @@ author_profile: true
 - *IEEE Sensors Letters*
 - *Scientific Reports*
 
-### International Conferences
+## International Conferences
 
 - IEEE ACDSA'26
 - IEEE ICECCME'26
@@ -40,16 +40,25 @@ author_profile: true
 
 # Positions of Responsibility
 
-### Secretary
+## Secretary
 **IEEE Calcutta University Student Branch (CUSB)**  
 *Nov 2023 – Apr 2025*
 
-### President
+## President
 **AI & Robotics Club, IEEE CUSB**  
 *Nov 2023 – Apr 2025*
 
-### Founding Secretary
+## Founding Secretary
 **AI & Robotics Club, IEEE CUSB**  
+*May 2023 – Oct 2023*
+
+## Media Coordinator
+**Hult Prize, University of Calcutta Chapter**  
+*Sep 2022 – Jan 2023*
+
+## Outreach Coordinator
+**Hult Prize, University of Calcutta Chapter**  
+*Jan 2022 – Mar 2022***AI & Robotics Club, IEEE CUSB**  
 *May 2023 – Oct 2023*
 
 ### Media Coordinator
