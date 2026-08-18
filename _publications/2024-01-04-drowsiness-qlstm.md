@@ -5,7 +5,7 @@ category: conferences
 permalink: /publication/2024-01-04-drowsiness-qlstm
 excerpt: ''
 date: 2024-01-04
-venue: 'IEEE ICWITE 2024'
+venue: 'IEEE ICWITE'
 paperurl: 'https://doi.org/10.1109/ICWITE59797.2024.10502814'
 citation: 'S. De and A. K. Gupta, "A Quantum Machine Learning framework for Driver Drowsiness Detection using Biopotential Signals and Head Movement Analysis," 2024 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), Bangalore, India, 2024, pp. 461-466'
 ---
