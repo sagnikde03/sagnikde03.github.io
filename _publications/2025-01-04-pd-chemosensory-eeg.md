@@ -1,5 +1,5 @@
 ---
-title: "Identification of patients with <i>de novo</i> Parkinson's Disease from chemosensory EEG signals using ICEEMDAN domain Entropy Features"
+title: "Identification of patients with de novo Parkinson's Disease from chemosensory EEG signals using ICEEMDAN domain Entropy Features"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-01-04-pd-chemosensory-eeg
