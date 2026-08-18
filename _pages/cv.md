@@ -58,17 +58,6 @@ Work Experience
   * B.Tech Thesis: A Fuzzy Relation induced Causal Brain Connectivity Network decoding using metaheuristically optimized Hybrid Graph Convolution Network
 
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-
-Patents
-======
-* “An Innovative Method for Estimating Blood Pressure and Classifying Hypertension Levels Using PPG,” Sagnik De, Prithwijit Mukherjee, Anisha Halder Roy, Application No.: 202431068453 A, Indian Patent Journal, India, published on 20/09/2024
-
-
 Technical Skills
 ======
 * Machine Learning: Supervised/Unsupervised/Self-supervised Learning, Generative Modeling, Continual Learning, Domain Adaptation, Transfer Learning, Computer Vision, Time-series Forecasting
