@@ -16,7 +16,7 @@ Education
 * Indian School Certificate Examination (ISC), Don Bosco School, Liluah, 2021
 * Indian Certificate of Secondary Education (ICSE), Don Bosco School, Liluah, 2019
 
-Work experience
+Work Experience
 ======
 * Indian Institute of Technology (IIT), Delhi
   * Winter Research Intern, Dec 2024 – May 2025
@@ -64,7 +64,12 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Skills
+Patents
+======
+* “An Innovative Method for Estimating Blood Pressure and Classifying Hypertension Levels Using PPG,” Sagnik De, Prithwijit Mukherjee, Anisha Halder Roy, Application No.: 202431068453 A, Indian Patent Journal, India, published on 20/09/2024
+
+
+Technical Skills
 ======
 * Machine Learning: Supervised/Unsupervised/Self-supervised Learning, Generative Modeling, Continual Learning, Domain Adaptation, Transfer Learning, Computer Vision, Time-series Forecasting
 * Deep Learning: Vision-Language Models, Diffusion Models, GANs, VAEs, State-Space Models, Graph Neural Networks, Transformers
@@ -75,4 +80,37 @@ Skills
 * Programming: Python, Java, C, Javascript, MATLAB
 * Software & Tools: Freesurfer, Nilearn, FSL, SPM, AFNI, CATIA, Unity, Anaconda, EEGLab, Git
 * Web Technologies: HTML/CSS, Django, React
-  
+
+
+Awards & Honours
+======
+* Awarded fellowship under Taiwan Experience Education Program (TEEP) 2026
+* Recipient of INSA-IASc-NASI Summer Research Fellowship 2024
+* Awarded fellowship under Satyendra Nath Bose Summer Research Internship 2024 by NIT Silchar
+* Won the 3rd Runners Up in TELECAST 2024 organized by University of Calcutta, Kolkata in collaboration with CTiF (Denmark), India
+* Awarded the Outstanding Volunteer 2023-24 by IEEE Calcutta University Student Branch
+* Received the Best Paper Award at IEEE ICCCCM 2024 and IEEE IACIS 2024
+* Won the 1st Prize in COGNITECH 2023, organized by the AI & Robotics Club in collaboration with the IEEE Calcutta University Student Branch
+* Won the 1st Prize in Research Work Presentation 2023 organized by IEEE Photonics Society Kolkata Chapter, IEEE APS Kolkata Chapter & IEEE Calcutta University Student Branch
+
+Reviewer Activities
+======
+* Journals: Artificial Intelligence in Medicine, Biomedical Signal Processing & Control, IEEE Sensors Letters, Measurement, Computers in Biology and Medicine, Food Chemistry, Biological Psychology, IEEE Access, Scientific Reports
+* International Conferences: IEEE ACDSA’26, IEEE ICECCME’26, IEEE ECCE’25, IEEE CVIP’24, IEEE CONECCT’24, IEEE CVMI’24
+
+Position of Responsibility
+======
+* IEEE Calcutta University Student Branch (CUSB)
+  * Secretary, Nov 2023 – Apr 2025
+
+* AI & Robotics Club, IEEE CUSB
+  * President, Nov 2023 – Apr 2025
+
+* AI & Robotics Club, IEEE CUSB
+  * Founding Secretary, May 2023 – Oct 2023
+
+* Hult Prize, University of Calcutta Chapter ’23
+  * Media Coordinator, Sep 2022 – Jan 2023
+
+* Hult Prize, University of Calcutta Chapter ’22
+  * Outreach Coordinator, Jan 2022 – Mar 2022
