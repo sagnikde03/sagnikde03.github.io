@@ -19,9 +19,7 @@ main:
 
    - title: "Misc"
     url: /teaching/
-    children:
-      - title: "Awards & Honours"
-        url: /awards/
+    
     
   # - title: "CV"
   #   url: /cv-json/
