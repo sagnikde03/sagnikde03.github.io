@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2025-01-04-pd-chemosensory-eeg
 excerpt: ''
-date: 2025-01-04
+date: 2025-01-05
 venue: 'IEEE Sensors Letters'
 paperurl: 'https://doi.org/10.1109/LSENS.2025.3565312'
 citation: 'S. De, S. Pavuluri and A. K. Gupta, "Identification of patients with de novo Parkinson''s Disease from chemosensory EEG signals using ICEEMDAN domain Entropy Features," IEEE Sensors Letters, vol. 9, no. 6, pp. 1-4, June 2025, Art no. 7002804'
