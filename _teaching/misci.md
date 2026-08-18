@@ -60,11 +60,3 @@ author_profile: true
 **Hult Prize, University of Calcutta Chapter**  
 *Jan 2022 – Mar 2022***AI & Robotics Club, IEEE CUSB**  
 *May 2023 – Oct 2023*
-
-### Media Coordinator
-**Hult Prize, University of Calcutta Chapter**  
-*Sep 2022 – Jan 2023*
-
-### Outreach Coordinator
-**Hult Prize, University of Calcutta Chapter**  
-*Jan 2022 – Mar 2022*
