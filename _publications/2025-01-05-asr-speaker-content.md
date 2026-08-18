@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2025-01-05-asr-speaker-content
 excerpt: ''
-date: 2025-01-05
+date: 2025-01-04
 venue: 'IEEE Sensors Reviews'
 paperurl: 'https://doi.org/10.1109/SR.2025.3569785'
 citation: 'S. Pavuluri, S. De and A. K. Gupta, "Quantifying the Impact of Speaker and Content Features on ASR Systems Using Unsupervised Distance Metrics," IEEE Sensors Reviews, vol. 2, pp. 170-178, 2025'
