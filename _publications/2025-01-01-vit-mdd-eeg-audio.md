@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2025-01-01-vit-mdd-eeg-audio
 excerpt: ''
-date: 2025-01-01
+date: 2025-01-06
 venue: 'IEEE Transactions on Computational Biology and Bioinformatics'
 paperurl: 'https://ieeexplore.ieee.org/document/11218801'
 citation: 'S. De, A. Singh and A. K. Bhandari, "A Novel Vision Transformer Based Multimodal Fusion Approach for Clinical MDD Diagnosis Using EEG and Audio Signals," IEEE Transactions on Computational Biology and Bioinformatics, vol. 22, no. 6, pp. 3399-3409, Nov.-Dec. 2025'
