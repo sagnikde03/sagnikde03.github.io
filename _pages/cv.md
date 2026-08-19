@@ -80,7 +80,7 @@ Reviewer Activities
 * Journals: Artificial Intelligence in Medicine, Biomedical Signal Processing & Control, IEEE Sensors Letters, Measurement, Computers in Biology and Medicine, Food Chemistry, Biological Psychology, IEEE Access, Scientific Reports
 * International Conferences: IEEE ACDSA’26, IEEE ICECCME’26, IEEE ECCE’25, IEEE CVIP’24, IEEE CONECCT’24, IEEE CVMI’24
 
-Position of responsibility
+Position of Responsibility
 ======
 * Secretary, IEEE Calcutta University Student Branch (CUSB), Nov 2023 – Apr 2025
 * President, AI & Robotics Club, IEEE CUSB, Nov 2023 – Apr 2025
