@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -16,47 +16,40 @@ Education
 * Indian School Certificate Examination (ISC), Don Bosco School, Liluah, 2021
 * Indian Certificate of Secondary Education (ICSE), Don Bosco School, Liluah, 2019
 
-Work Experience
+Work experience
 ======
 * Indian Institute of Technology (IIT), Delhi
-  * Winter Research Intern, Dec 2024 – May 2025
-  * Supervisor: Dr. Tapan Kumar Gandhi
+  * Winter Research Intern, Dec 2024 – May 2025 (Supervisor: Dr. Tapan Kumar Gandhi)
   * Graph-based deep learning methods with explainable AI for anxiety state detection using EEG signals
-  * Development of explainable deep learning framework for robust brain tumor detection from MRI scans
+  * Explainable deep learning framework for robust brain tumour detection from MRI scans
 
 * Maulana Azad National Institute of Technology (MANIT), Bhopal
-  * Project Intern, Aug 2024 – Mar 2026
-  * Supervisor: Dr. Varun Bajaj
-  * Implementation of a deep learning framework utilizing cross-modal interactions for cognitive task decoding in BCI applications using EEG–fNIRS signals
-  * Designed a deep learning pipeline for Parkinson’s disease diagnosis using oculomotor biomarkers acquired through VR-based eye tracking
-  * Developed LLM benchmarking frameworks for clinical note analysis and reasoning
+  * Project Intern, Aug 2024 – Mar 2026 (Supervisor: Dr. Varun Bajaj)
+  * Cross-modal deep learning for cognitive task decoding in BCI applications using EEG–fNIRS signals
+  * Deep learning pipeline for Parkinson’s disease diagnosis using VR-based eye-tracking oculomotor biomarkers
+  * LLM benchmarking frameworks for clinical note analysis and reasoning
 
 * Indian Institute of Science (IISc), Bengaluru
-  * IASc-INSA-NASI Summer Research Fellow, May 2024 – July 2024
-  * Supervisor: Dr. Prasanta Kumar Ghosh
-  * Data-driven approach to predict acoustic field in a rectangular domain at an arbitrary frequency
-  * Dysarthric speech processing and analysis for identification of Parkinson’s Disease
+  * IASc-INSA-NASI Summer Research Fellow, May 2024 – July 2024 (Supervisor: Dr. Prasanta Kumar Ghosh)
+  * Data-driven prediction of acoustic fields in a rectangular domain at arbitrary frequencies
+  * Dysarthric speech processing and analysis for Parkinson’s Disease identification
 
 * International Institute of Information Technology, Naya Raipur
-  * Winter Research Intern, Nov 2023 – Apr 2024
-  * Supervisor: Dr. Anurag Singh
-  * Multimodal deep learning based end-to-end IoMT framework for diagnosis of Major Depressive Disorder (MDD) using EEG and Speech Signals
+  * Winter Research Intern, Nov 2023 – Apr 2024 (Supervisor: Dr. Anurag Singh)
+  * Multimodal deep learning based IoMT framework for Major Depressive Disorder diagnosis using EEG and Speech Signals
   * Unimodal deep learning approach for objective detection and monitoring of MDD using EEG signals
 
 * Centre for Development of Advanced Computing (CDAC), Pune
-  * Machine Learning Intern, Apr 2023 – Oct 2023
-  * Supervisor: Dr. Anil Kumar Gupta
-  * EEG-based early detection of Parkinson’s Disease using advanced signal decomposition and deep learning techniques
-  * Development of an age- and gender-informed deep learning framework for Alzheimer’s disease detection from T1-weighted MRI
-  * Explored multimodal deep learning models for wearable physiological signal analysis in digital health
+  * Machine Learning Intern, Apr 2023 – Oct 2023 (Supervisor: Dr. Anil Kumar Gupta)
+  * EEG-based early detection of Parkinson’s Disease using advanced signal decomposition and deep learning
+  * Age- and gender-informed deep learning framework for Alzheimer’s disease detection from T1-weighted MRI
+  * Multimodal deep learning models for wearable physiological signal analysis in digital health
 
 * University of Calcutta, Kolkata
-  * Undergraduate Research Assistant, Oct 2022 – Apr 2025
-  * Supervisor: Dr. Anisha Halder Roy
-  * Multimodal deep learning approach using EEG and sEMG signals for Lower Back Pain assessment
-  * Explored brain activity patterns associated with different Basic Taste (or gustory) perception, integrating deep learning methods for enhanced classification
-  * B.Tech Thesis: A Fuzzy Relation induced Causal Brain Connectivity Network decoding using metaheuristically optimized Hybrid Graph Convolution Network
-
+  * Undergraduate Research Assistant, Oct 2022 – Apr 2025 (Supervisor: Dr. Anisha Halder Roy)
+  * Multimodal deep learning using EEG and sEMG for Lower Back Pain assessment
+  * Deep learning-based analysis of brain activity associated with Basic Taste perception
+  * B.Tech Thesis: Fuzzy Relation induced Causal Brain Connectivity Network decoding using a metaheuristically optimized Hybrid Graph Convolution Network
 
 Technical Skills
 ======
@@ -73,7 +66,7 @@ Technical Skills
 
 Awards & Honours
 ======
-* Awarded fellowship under Taiwan Experience Education Program (TEEP) 2026
+* Awarded Taiwan Ministry of Education fellowship under Taiwan Experience Education Program 2026
 * Recipient of INSA-IASc-NASI Summer Research Fellowship 2024
 * Awarded fellowship under Satyendra Nath Bose Summer Research Internship 2024 by NIT Silchar
 * Won the 3rd Runners Up in TELECAST 2024 organized by University of Calcutta, Kolkata in collaboration with CTiF (Denmark), India
@@ -87,19 +80,10 @@ Reviewer Activities
 * Journals: Artificial Intelligence in Medicine, Biomedical Signal Processing & Control, IEEE Sensors Letters, Measurement, Computers in Biology and Medicine, Food Chemistry, Biological Psychology, IEEE Access, Scientific Reports
 * International Conferences: IEEE ACDSA’26, IEEE ICECCME’26, IEEE ECCE’25, IEEE CVIP’24, IEEE CONECCT’24, IEEE CVMI’24
 
-Position of Responsibility
+Position of responsibility
 ======
-* IEEE Calcutta University Student Branch (CUSB)
-  * Secretary, Nov 2023 – Apr 2025
-
-* AI & Robotics Club, IEEE CUSB
-  * President, Nov 2023 – Apr 2025
-
-* AI & Robotics Club, IEEE CUSB
-  * Founding Secretary, May 2023 – Oct 2023
-
-* Hult Prize, University of Calcutta Chapter ’23
-  * Media Coordinator, Sep 2022 – Jan 2023
-
-* Hult Prize, University of Calcutta Chapter ’22
-  * Outreach Coordinator, Jan 2022 – Mar 2022
+* Secretary, IEEE Calcutta University Student Branch (CUSB), Nov 2023 – Apr 2025
+* President, AI & Robotics Club, IEEE CUSB, Nov 2023 – Apr 2025
+* Founding Secretary, AI & Robotics Club, IEEE CUSB, May 2023 – Oct 2023
+* Media Coordinator, Hult Prize, University of Calcutta Chapter ’23, Sep 2022 – Jan 2023
+* Outreach Coordinator, Hult Prize, University of Calcutta Chapter ’22, Jan 2022 – Mar 2022
