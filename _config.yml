@@ -27,6 +27,10 @@ author:
   name             : "Sagnik De"
   pronouns         : # example: "she/her"  
   bio              : "Machine Learning Engineer"
+  taglines:
+    - "AI in Healthcare"
+    - "GenAI • Agentic AI • LLMs • RAG • MCP • LangGraph • Multi-Agent Systems"
+    - "FastAPI • AWS Bedrock • MLOps"
   employer         : "University of Calcutta, Kolkata"
   location         : "Kolkata, West Bengal"
   uri              : # URL
