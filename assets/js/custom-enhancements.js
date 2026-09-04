@@ -14,6 +14,14 @@
 
     var canvas = document.createElement("canvas");
     canvas.id = "site-bg-canvas";
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
+    canvas.style.zIndex = "-1";
+    canvas.style.pointerEvents = "none";
+    canvas.style.display = "block";
     document.body.appendChild(canvas);
     var ctx = canvas.getContext("2d");
 
@@ -160,6 +168,10 @@
 
     var el = document.createElement("p");
     el.className = "author__tagline";
+    el.style.color = "var(--global-text-color)";
+    el.style.fontFamily = "var(--font-mono), monospace";
+    el.style.fontSize = "0.85em";
+    el.style.margin = "4px 0 0";
     var textSpan = document.createElement("span");
     var cursor = document.createElement("span");
     cursor.className = "cursor";
