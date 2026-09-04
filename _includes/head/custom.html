@@ -12,8 +12,222 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 </noscript>
 
-<!-- Custom visual/feature upgrades (fonts, background graphics, cards, buttons) -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/custom-enhancements.css">
+<!-- Custom visual/feature upgrades — inlined directly (not a separate stylesheet)
+     so it always loads with the page, with zero dependency on a second HTTP
+     request, cache state, or file path resolution. -->
+<style>
+:root {
+  --font-heading: "Sora", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --accent-glow: rgba(47, 127, 147, 0.4);
+}
+
+html body,
+html body p,
+html body li,
+html body a,
+html body span,
+html body div {
+  font-family: var(--font-body) !important;
+}
+
+html body h1, html body h2, html body h3,
+html body h4, html body h5, html body h6,
+html body .page__title,
+html body .archive__item-title,
+html body .author__name,
+html body .masthead__menu-item a,
+html body .masthead a {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.01em;
+}
+
+html body code, html body pre, html body kbd, html body samp,
+html body .highlight, html body .filepath {
+  font-family: var(--font-mono) !important;
+}
+
+body .page__content p,
+body .page__content li {
+  line-height: 1.7 !important;
+}
+
+body .page__content p {
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+body .page__content a:not(.btn) {
+  background-image: linear-gradient(var(--global-link-color), var(--global-link-color));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.25s ease;
+}
+body .page__content a:not(.btn):hover {
+  background-size: 100% 1.5px;
+}
+
+#site-bg-canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: 0.55;
+  display: block !important;
+}
+html[data-theme="dark"] #site-bg-canvas { opacity: 0.35; }
+
+body::before {
+  content: "" !important;
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -2 !important;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(47, 127, 147, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(47, 127, 147, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(47, 127, 147, 0.10) 0%, transparent 50%);
+  background-color: var(--global-bg-color);
+  animation: bg-drift 22s ease-in-out infinite alternate;
+}
+@keyframes bg-drift {
+  0%   { background-position: 0% 0%, 100% 0%, 50% 100%; }
+  100% { background-position: 8% 6%, 92% 8%, 46% 94%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+  #site-bg-canvas { display: none !important; }
+}
+
+body .masthead {
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  border-bottom: 1px solid var(--global-border-color);
+}
+html[data-theme="dark"] body .masthead {
+  background-color: rgba(38, 40, 42, 0.78) !important;
+}
+body .masthead__menu-item a { position: relative; }
+body .masthead__menu-item a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--global-base-color);
+  transition: width 0.2s ease;
+}
+body .masthead__menu-item a:hover::after { width: 100%; }
+
+body .author__avatar img {
+  box-shadow: 0 0 0 3px var(--global-bg-color), 0 0 0 5px var(--accent-glow) !important;
+  border-radius: 50% !important;
+}
+
+body .author__tagline {
+  font-size: 0.85em !important;
+  min-height: 1.4em;
+  line-height: 1.5;
+  color: var(--global-text-color) !important;
+  font-family: var(--font-mono) !important;
+  margin: 4px 0 24px !important;
+  display: block;
+}
+body .author__tagline .cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+body .author__urls-wrapper { margin-top: 16px !important; }
+
+/* Publication / talk / portfolio entries — give them an actual card look,
+   matching what the theme doesn't provide by default in list view */
+body .archive__item {
+  border: 1px solid var(--global-border-color) !important;
+  border-radius: 10px !important;
+  padding: 20px 22px !important;
+  margin-bottom: 18px !important;
+  background: var(--global-bg-color) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+body .archive__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.25);
+}
+body .archive__item-title { margin-top: 0 !important; }
+body .archive__item .page__meta { color: var(--global-text-color-light); }
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+
+#scroll-progress {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 3px !important;
+  width: 0%;
+  background: linear-gradient(90deg, var(--global-base-color), #a6dced) !important;
+  z-index: 10000 !important;
+  transition: width 0.1s ease-out;
+}
+
+#back-to-top {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background: var(--global-base-color) !important;
+  color: #fff !important;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 9999 !important;
+}
+#back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#back-to-top:hover { filter: brightness(1.1); }
+
+.copy-code-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 0.72em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--global-border-color);
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-family: var(--font-mono);
+}
+div.highlighter-rouge, .highlight, figure.highlight { position: relative; }
+div.highlighter-rouge:hover .copy-code-btn,
+.highlight:hover .copy-code-btn,
+figure.highlight:hover .copy-code-btn { opacity: 1; }
+</style>
 
 <!-- Support for Academicons -->
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
