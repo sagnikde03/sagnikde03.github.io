@@ -8,6 +8,44 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- 0. Fallback inline styling (belt-and-suspenders) ------------
+     The <head> <style> block should already handle all of this. This just
+     re-applies the critical visual pieces directly via inline styles so the
+     look never depends on a single CSS pathway. Harmless if the <style>
+     block is already doing its job — inline styles just confirm the same
+     values. */
+  function applyFallbackStyling() {
+    var fontBody = '"Inter","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif';
+    var fontHeading = '"Sora","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif';
+
+    document.body.style.fontFamily = fontBody;
+    document.querySelectorAll(
+      "h1, h2, h3, h4, h5, h6, .page__title, .archive__item-title, .author__name"
+    ).forEach(function (el) {
+      el.style.fontFamily = fontHeading;
+    });
+
+    document.querySelectorAll(".archive__item").forEach(function (el) {
+      el.style.border = "1px solid var(--global-border-color, #e3e5e6)";
+      el.style.borderRadius = "10px";
+      el.style.padding = "20px 22px";
+      el.style.marginBottom = "18px";
+      el.style.transition = "transform 0.25s ease, box-shadow 0.25s ease";
+      el.addEventListener("mouseenter", function () {
+        el.style.transform = "translateY(-3px)";
+        el.style.boxShadow = "0 10px 24px -12px rgba(0,0,0,0.25)";
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.transform = "translateY(0)";
+        el.style.boxShadow = "none";
+      });
+    });
+
+    document.querySelectorAll(".page__content p").forEach(function (el) {
+      el.style.textAlign = "justify";
+    });
+  }
+
   /* ---------- 1. Particle network background canvas --------------------- */
   function initBackgroundCanvas() {
     if (reduceMotion) return;
@@ -171,7 +209,8 @@
     el.style.color = "var(--global-text-color)";
     el.style.fontFamily = "var(--font-mono), monospace";
     el.style.fontSize = "0.85em";
-    el.style.margin = "4px 0 0";
+    el.style.margin = "4px 0 24px";
+    el.style.display = "block";
     var textSpan = document.createElement("span");
     var cursor = document.createElement("span");
     cursor.className = "cursor";
@@ -236,6 +275,7 @@
 
   /* ---------- Init on DOM ready -------------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
+    applyFallbackStyling();
     initBackgroundCanvas();
     initScrollProgress();
     initBackToTop();
