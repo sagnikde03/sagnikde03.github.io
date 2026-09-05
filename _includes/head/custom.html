@@ -89,9 +89,9 @@ body::before {
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -2 !important;
   background:
-    radial-gradient(circle at 15% 20%, rgba(47, 127, 147, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(47, 127, 147, 0.14) 0%, transparent 40%),
-    radial-gradient(circle at 50% 90%, rgba(47, 127, 147, 0.10) 0%, transparent 50%);
+    radial-gradient(circle at 15% 20%, rgba(59, 130, 196, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(59, 130, 196, 0.17) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(59, 130, 196, 0.13) 0%, transparent 50%);
   background-color: var(--global-bg-color);
   animation: bg-drift 22s ease-in-out infinite alternate;
 }
@@ -130,12 +130,19 @@ body .author__avatar img {
   border-radius: 50% !important;
 }
 
+/* Fix: theme's .sidebar sets overflow-y: auto, which implicitly clips
+   overflow-x too (a CSS quirk), cutting off the avatar's box-shadow ring
+   on the left. Force horizontal overflow back to visible. */
+body .sidebar {
+  overflow-x: visible !important;
+}
+
+/* Tagline: match the bio's own font (no longer a distinct monospace/size) */
 body .author__tagline {
-  font-size: 0.85em !important;
-  min-height: 1.4em;
+  font-family: inherit !important;
+  font-size: inherit !important;
   line-height: 1.5;
   color: var(--global-text-color) !important;
-  font-family: var(--font-mono) !important;
   margin: 4px 0 24px !important;
   display: block;
 }
@@ -147,6 +154,20 @@ body .author__tagline .cursor {
 @keyframes blink { 50% { opacity: 0; } }
 
 body .author__urls-wrapper { margin-top: 16px !important; }
+
+/* Smaller nav links and page headings, hierarchy preserved (h1 > h2 > h3) */
+body .masthead__menu-item a {
+  font-size: 0.95rem !important;
+}
+body .page__title {
+  font-size: 1.5rem !important;
+}
+body .page__content h2 {
+  font-size: 1.25rem !important;
+}
+body .page__content h3 {
+  font-size: 1.1rem !important;
+}
 
 /* Publication / talk / portfolio entries — give them an actual card look,
    matching what the theme doesn't provide by default in list view */
