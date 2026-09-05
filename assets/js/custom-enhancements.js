@@ -44,6 +44,26 @@
     document.querySelectorAll(".page__content p").forEach(function (el) {
       el.style.textAlign = "justify";
     });
+
+    // Fix avatar ring clipping: theme's .sidebar overflow-y:auto implicitly
+    // clips overflow-x too, cutting off the box-shadow ring on the left.
+    document.querySelectorAll(".sidebar").forEach(function (el) {
+      el.style.overflowX = "visible";
+    });
+
+    // Smaller nav links and page headings, hierarchy preserved
+    document.querySelectorAll(".masthead__menu-item a").forEach(function (el) {
+      el.style.fontSize = "0.95rem";
+    });
+    document.querySelectorAll(".page__title").forEach(function (el) {
+      el.style.fontSize = "1.5rem";
+    });
+    document.querySelectorAll(".page__content h2").forEach(function (el) {
+      el.style.fontSize = "1.25rem";
+    });
+    document.querySelectorAll(".page__content h3").forEach(function (el) {
+      el.style.fontSize = "1.1rem";
+    });
   }
 
   /* ---------- 1. Particle network background canvas --------------------- */
@@ -207,8 +227,8 @@
     var el = document.createElement("p");
     el.className = "author__tagline";
     el.style.color = "var(--global-text-color)";
-    el.style.fontFamily = "var(--font-mono), monospace";
-    el.style.fontSize = "0.85em";
+    el.style.fontFamily = "inherit";
+    el.style.fontSize = "inherit";
     el.style.margin = "4px 0 24px";
     el.style.display = "block";
     var textSpan = document.createElement("span");
