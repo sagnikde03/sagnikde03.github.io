@@ -68,7 +68,7 @@
 
     // Sidebar link list (location, university, email, Scholar, ORCID, GitHub, LinkedIn)
     document.querySelectorAll(".author__urls li, .author__urls a").forEach(function (el) {
-      el.style.fontSize = "0.9rem";
+      el.style.fontSize = "0.75rem";
     });
 
     document.querySelectorAll(".page__content h2").forEach(function (el) {
