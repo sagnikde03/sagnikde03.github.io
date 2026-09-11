@@ -2,24 +2,17 @@
 
 <!-- start custom head snippets -->
 
-<!-- Custom fonts: Sora (headings), Inter (body), JetBrains Mono (code) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-</noscript>
-
 <!-- Custom visual/feature upgrades — inlined directly (not a separate stylesheet)
      so it always loads with the page, with zero dependency on a second HTTP
-     request, cache state, or file path resolution. -->
+     request, cache state, or file path resolution. Uses the operating
+     system's own font stack (no external Google Fonts request needed) —
+     fast, reliable, and looks clean/professional by default on every
+     platform (this is the same approach GitHub, Medium, etc. use). -->
 <style>
 :root {
-  --font-heading: "Sora", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   --accent-glow: rgba(47, 127, 147, 0.4);
 }
 
@@ -32,6 +25,15 @@ html body div {
   font-family: var(--font-body) !important;
 }
 
+/* Overall smaller, more compact type scale */
+html body {
+  font-size: 15px !important;
+}
+html body .page__content p,
+html body .page__content li {
+  font-size: 0.95rem !important;
+}
+
 html body h1, html body h2, html body h3,
 html body h4, html body h5, html body h6,
 html body .page__title,
@@ -40,6 +42,7 @@ html body .author__name,
 html body .masthead__menu-item a,
 html body .masthead a {
   font-family: var(--font-heading) !important;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -125,26 +128,30 @@ body .masthead__menu-item a::after {
 }
 body .masthead__menu-item a:hover::after { width: 100%; }
 
+/* Avatar ring: real border, not box-shadow — a border is part of the
+   element's own box and can NEVER be clipped by an ancestor's overflow,
+   unlike box-shadow. This fixes the left-side clipping for good. */
 body .author__avatar img {
-  box-shadow: 0 0 0 3px var(--global-bg-color), 0 0 0 5px var(--accent-glow) !important;
+  border: 4px solid var(--global-base-color) !important;
   border-radius: 50% !important;
+  padding: 2px !important;
 }
 
-/* Fix: theme's .sidebar sets overflow-y: auto, which implicitly clips
-   overflow-x too (a CSS quirk), cutting off the avatar's box-shadow ring
-   on the left. Force horizontal overflow back to visible. */
+/* Belt-and-suspenders: also fix the ancestor overflow quirk directly */
 body .sidebar {
   overflow-x: visible !important;
 }
 
-/* Tagline: match the bio's own font (no longer a distinct monospace/size) */
+/* Tagline: explicit small size, matching the bio's own small sidebar text */
 body .author__tagline {
-  font-family: inherit !important;
-  font-size: inherit !important;
-  line-height: 1.5;
+  font-size: 0.8rem !important;
   color: var(--global-text-color) !important;
   margin: 4px 0 24px !important;
   display: block;
+  line-height: 1.5;
+}
+body .author__bio {
+  font-size: 0.8rem !important;
 }
 body .author__tagline .cursor {
   display: inline-block;
@@ -157,16 +164,16 @@ body .author__urls-wrapper { margin-top: 16px !important; }
 
 /* Smaller nav links and page headings, hierarchy preserved (h1 > h2 > h3) */
 body .masthead__menu-item a {
-  font-size: 0.95rem !important;
+  font-size: 0.88rem !important;
 }
 body .page__title {
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
 }
 body .page__content h2 {
-  font-size: 1.25rem !important;
+  font-size: 1.1rem !important;
 }
 body .page__content h3 {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
 }
 
 /* Publication / talk / portfolio entries — give them an actual card look,
