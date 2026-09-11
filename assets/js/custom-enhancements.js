@@ -15,10 +15,11 @@
      block is already doing its job — inline styles just confirm the same
      values. */
   function applyFallbackStyling() {
-    var fontBody = '"Inter","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif';
-    var fontHeading = '"Sora","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif';
+    var fontBody = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    var fontHeading = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 
     document.body.style.fontFamily = fontBody;
+    document.body.style.fontSize = "15px";
     document.querySelectorAll(
       "h1, h2, h3, h4, h5, h6, .page__title, .archive__item-title, .author__name"
     ).forEach(function (el) {
@@ -47,23 +48,41 @@
 
     // Fix avatar ring clipping: theme's .sidebar overflow-y:auto implicitly
     // clips overflow-x too, cutting off the box-shadow ring on the left.
+    // Also switch to a real border (can't be clipped by ancestor overflow).
     document.querySelectorAll(".sidebar").forEach(function (el) {
       el.style.overflowX = "visible";
+    });
+    document.querySelectorAll(".author__avatar img").forEach(function (el) {
+      el.style.border = "4px solid var(--global-base-color)";
+      el.style.borderRadius = "50%";
+      el.style.padding = "2px";
     });
 
     // Smaller nav links and page headings, hierarchy preserved
     document.querySelectorAll(".masthead__menu-item a").forEach(function (el) {
-      el.style.fontSize = "0.95rem";
+      el.style.fontSize = "0.88rem";
     });
     document.querySelectorAll(".page__title").forEach(function (el) {
-      el.style.fontSize = "1.5rem";
+      el.style.fontSize = "1.3rem";
     });
     document.querySelectorAll(".page__content h2").forEach(function (el) {
-      el.style.fontSize = "1.25rem";
-    });
-    document.querySelectorAll(".page__content h3").forEach(function (el) {
       el.style.fontSize = "1.1rem";
     });
+    document.querySelectorAll(".page__content h3").forEach(function (el) {
+      el.style.fontSize = "1rem";
+    });
+
+    // Background tint: set directly as the <body> element's own background,
+    // not a separate pseudo-element or overlay div. A background is always
+    // painted behind an element's own content by definition, so this cannot
+    // be hidden by any z-index/stacking-context issue, and it does not
+    // depend on the <style> block in <head> working at all.
+    document.body.style.backgroundImage =
+      "radial-gradient(circle at 15% 20%, rgba(59,130,196,0.22) 0%, transparent 45%)," +
+      "radial-gradient(circle at 85% 15%, rgba(59,130,196,0.17) 0%, transparent 40%)," +
+      "radial-gradient(circle at 50% 90%, rgba(59,130,196,0.13) 0%, transparent 50%)";
+    document.body.style.backgroundAttachment = "fixed, fixed, fixed";
+    document.body.style.backgroundRepeat = "no-repeat, no-repeat, no-repeat";
   }
 
   /* ---------- 1. Particle network background canvas --------------------- */
@@ -80,7 +99,11 @@
     canvas.style.zIndex = "-1";
     canvas.style.pointerEvents = "none";
     canvas.style.display = "block";
-    document.body.appendChild(canvas);
+    if (document.body.firstChild) {
+      document.body.insertBefore(canvas, document.body.firstChild);
+    } else {
+      document.body.appendChild(canvas);
+    }
     var ctx = canvas.getContext("2d");
 
     var w, h, particles, dpr;
@@ -227,10 +250,12 @@
     var el = document.createElement("p");
     el.className = "author__tagline";
     el.style.color = "var(--global-text-color)";
-    el.style.fontFamily = "inherit";
-    el.style.fontSize = "inherit";
     el.style.margin = "4px 0 24px";
     el.style.display = "block";
+    el.style.fontSize = "0.8rem";
+    el.style.lineHeight = "1.5";
+    var bioEl = document.querySelector(".author__bio");
+    if (bioEl) bioEl.style.fontSize = "0.8rem";
     var textSpan = document.createElement("span");
     var cursor = document.createElement("span");
     cursor.className = "cursor";
