@@ -65,6 +65,12 @@
     document.querySelectorAll(".page__title").forEach(function (el) {
       el.style.fontSize = "1.3rem";
     });
+
+    // Sidebar link list (location, university, email, Scholar, ORCID, GitHub, LinkedIn)
+    document.querySelectorAll(".author__urls li, .author__urls a").forEach(function (el) {
+      el.style.fontSize = "0.9rem";
+    });
+
     document.querySelectorAll(".page__content h2").forEach(function (el) {
       el.style.fontSize = "1.1rem";
     });
@@ -254,8 +260,13 @@
     el.style.display = "block";
     el.style.fontSize = "0.8rem";
     el.style.lineHeight = "1.5";
+    el.style.fontWeight = "400";
     var bioEl = document.querySelector(".author__bio");
-    if (bioEl) bioEl.style.fontSize = "0.8rem";
+    if (bioEl) {
+      bioEl.style.fontSize = "0.8rem";
+      bioEl.style.lineHeight = "1.5";
+      bioEl.style.fontWeight = "400";
+    }
     var textSpan = document.createElement("span");
     var cursor = document.createElement("span");
     cursor.className = "cursor";
