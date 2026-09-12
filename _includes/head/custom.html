@@ -128,6 +128,12 @@ body .masthead__menu-item a::after {
 }
 body .masthead__menu-item a:hover::after { width: 100%; }
 
+/* Persistent underline on the currently active nav tab (not just on hover) */
+body .masthead__menu-item.selected a::after {
+  width: 100% !important;
+  height: 3px !important;
+}
+
 /* Avatar ring: real border, not box-shadow — a border is part of the
    element's own box and can NEVER be clipped by an ancestor's overflow,
    unlike box-shadow. This fixes the left-side clipping for good. */
@@ -142,16 +148,24 @@ body .sidebar {
   overflow-x: visible !important;
 }
 
-/* Tagline: explicit small size, matching the bio's own small sidebar text */
+/* Tagline, bio, and the location/email/social list below it all use the
+   exact same explicit rem value, so they visually match. (Previously bio/
+   tagline used rem while the meta list inherited the theme's em-based
+   sizing from a different font-size context — same-looking number, actually
+   different rendered size.) */
 body .author__tagline {
-  font-size: 0.8rem !important;
+  font-size: 0.72rem !important;
   color: var(--global-text-color) !important;
   margin: 4px 0 24px !important;
   display: block;
   line-height: 1.5;
 }
 body .author__bio {
-  font-size: 0.8rem !important;
+  font-size: 0.72rem !important;
+}
+body .author__urls-wrapper li,
+body .author__urls-wrapper a {
+  font-size: 0.72rem !important;
 }
 body .author__tagline .cursor {
   display: inline-block;
