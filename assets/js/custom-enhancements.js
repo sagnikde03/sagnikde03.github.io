@@ -65,12 +65,6 @@
     document.querySelectorAll(".page__title").forEach(function (el) {
       el.style.fontSize = "1.3rem";
     });
-
-    // Sidebar link list (location, university, email, Scholar, ORCID, GitHub, LinkedIn)
-    document.querySelectorAll(".author__urls li, .author__urls a").forEach(function (el) {
-      el.style.fontSize = "0.7rem";
-    });
-
     document.querySelectorAll(".page__content h2").forEach(function (el) {
       el.style.fontSize = "1.1rem";
     });
@@ -224,7 +218,10 @@
     );
     if (!targets.length) return;
 
-    targets.forEach(function (el) { el.classList.add("reveal-on-scroll"); });
+    targets.forEach(function (el, i) {
+      el.classList.add("reveal-on-scroll");
+      el.style.transitionDelay = (Math.min(i, 8) * 60) + "ms";
+    });
 
     if (!("IntersectionObserver" in window) || reduceMotion) {
       targets.forEach(function (el) { el.classList.add("is-visible"); });
@@ -258,15 +255,13 @@
     el.style.color = "var(--global-text-color)";
     el.style.margin = "4px 0 24px";
     el.style.display = "block";
-    el.style.fontSize = "0.8rem";
+    el.style.fontSize = "0.72rem";
     el.style.lineHeight = "1.5";
-    el.style.fontWeight = "400";
     var bioEl = document.querySelector(".author__bio");
-    if (bioEl) {
-      bioEl.style.fontSize = "0.8rem";
-      bioEl.style.lineHeight = "1.5";
-      bioEl.style.fontWeight = "400";
-    }
+    if (bioEl) bioEl.style.fontSize = "0.72rem";
+    document.querySelectorAll(".author__urls-wrapper li, .author__urls-wrapper a").forEach(function (el2) {
+      el2.style.fontSize = "0.72rem";
+    });
     var textSpan = document.createElement("span");
     var cursor = document.createElement("span");
     cursor.className = "cursor";
@@ -329,6 +324,87 @@
     });
   }
 
+  /* ---------- 7. Publications page: category badges + copy-citation
+     buttons. Only activates if it detects the Journal Articles /
+     Conference Papers / Patents headings on the page. --------- */
+  function enhancePublicationsPage() {
+    var content = document.querySelector(".page__content");
+    if (!content) return;
+
+    var allH2 = content.querySelectorAll("h2");
+    var headings = [];
+    allH2.forEach(function (h) {
+      if (/journal articles|conference papers|patents/i.test(h.textContent)) {
+        headings.push(h);
+      }
+    });
+    if (!headings.length) return; // not the publications page
+
+    // Group each section's .archive__item cards (everything between this
+    // heading and the next one)
+    var sections = headings.map(function (h, i) {
+      var end = headings[i + 1] || null;
+      var items = [];
+      var el = h.nextElementSibling;
+      while (el && el !== end) {
+        if (el.classList && el.classList.contains("archive__item")) items.push(el);
+        el = el.nextElementSibling;
+      }
+      return { heading: h, items: items };
+    });
+
+    var badgeColors = {
+      "journal articles": "#2f7f93",
+      "conference papers": "#3b7dc4",
+      "patents": "#8a5cb8"
+    };
+
+    // Category badges + copy-citation buttons on each card
+    sections.forEach(function (sec) {
+      var label = sec.heading.textContent.trim();
+      var color = badgeColors[label.toLowerCase()] || "var(--global-base-color)";
+      var singular = label.replace(/s$/, "");
+
+      sec.items.forEach(function (item) {
+        item.style.position = "relative";
+
+        var badge = document.createElement("span");
+        badge.textContent = singular;
+        badge.style.cssText =
+          "position:absolute;top:16px;right:18px;font-size:0.66rem;font-weight:700;" +
+          "padding:3px 10px;border-radius:12px;color:#fff;background:" + color + ";" +
+          "letter-spacing:0.03em;text-transform:uppercase;";
+        item.appendChild(badge);
+
+        var citeP = null;
+        var ps = item.querySelectorAll("p");
+        for (var i = 0; i < ps.length; i++) {
+          if (/Recommended citation:/i.test(ps[i].textContent)) {
+            citeP = ps[i];
+            break;
+          }
+        }
+        if (citeP) {
+          var copyBtn = document.createElement("button");
+          copyBtn.type = "button";
+          copyBtn.textContent = "Copy citation";
+          copyBtn.style.cssText =
+            "margin-top:8px;font-size:0.78rem;padding:4px 12px;border-radius:6px;" +
+            "border:1px solid var(--global-border-color);background:transparent;" +
+            "color:var(--global-text-color-light);cursor:pointer;";
+          copyBtn.addEventListener("click", function () {
+            var text = citeP.textContent.replace(/^\s*Recommended citation:\s*/i, "").trim();
+            navigator.clipboard.writeText(text).then(function () {
+              copyBtn.textContent = "Copied!";
+              setTimeout(function () { copyBtn.textContent = "Copy citation"; }, 1500);
+            });
+          });
+          citeP.insertAdjacentElement("afterend", copyBtn);
+        }
+      });
+    });
+  }
+
   /* ---------- Init on DOM ready -------------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
     applyFallbackStyling();
@@ -338,5 +414,6 @@
     initRevealOnScroll();
     initTagline();
     initCodeCopy();
+    enhancePublicationsPage();
   });
 })();
